@@ -2,6 +2,7 @@ import "./App.css";
 import styled from "styled-components";
 
 import Navbar from "./Navbar";
+import Hero from './Hero'
 import { ThemeProvider } from "styled-components";
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
     }
     & a,
     button {
-      font-family: "Raleway";
+      font-family: 'SF Mono Light';
     }
     & p {
       font-family: "RobotoSlab";
@@ -39,6 +40,7 @@ function App() {
       <ThemeWrapper>
         <div>
           <Navbar />
+          <Hero/>
         </div>
       </ThemeWrapper>
     </ThemeProvider>
