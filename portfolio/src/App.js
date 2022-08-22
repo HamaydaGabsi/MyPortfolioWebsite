@@ -11,24 +11,31 @@ function App() {
     headingFontFamily:
       "Oswald, SF Display, Helvetica Neue, Circular, sans-serif",
   };
+  const theme = {
+    typography: typographyTheme,
+    primary: "#A862EA",
+    secondary: "#6383EA",
+    primaryDark: "#6545A4",
+    secondaryDark: "#465CA4",
+    primaryLight: "#BF62EA",
+  };
   const ThemeWrapper = styled.div`
     & h1 {
-      font-family: 'Oswald';
+      font-family: "Oswald";
       font-weight: 500;
       font-size: 118.7px;
       line-height: 3rem;
     }
-    & a {
-      font-family: 'RobotoSlab';
-      font-size: 16px;
+    & a,
+    button {
+      font-family: "Raleway";
     }
-    & p , button{
-      font-family: 'RobotoSlab';
-      font-size: 21px;
+    & p {
+      font-family: "RobotoSlab";
     }
   `;
   return (
-    <ThemeProvider theme={{ typography: typographyTheme }}>
+    <ThemeProvider theme={theme}>
       <ThemeWrapper>
         <div>
           <Navbar />
